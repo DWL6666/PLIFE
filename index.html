@@ -2,14 +2,26 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <title>내 웹사이트</title>
+  <title>혈액형 계산기</title>
 </head>
 <body>
-  <h1>내 첫 웹사이트</h1>
-  <p>버튼을 눌러 자바스크립트를 실행해보세요!</p>
+  <h1>혈액형 예측기</h1>
+  <p>부모의 ABO, Rh, Bombay 정보를 입력하고 실행 버튼을 눌러보세요.</p>
 
-  <button onclick="myFunction()">실행</button>
+  <label>아버지 ABO: <input id="fatherABO" type="text"></label><br>
+  <label>아버지 Rh (+/-): <input id="fatherRh" type="text"></label><br>
+  <label>아버지 Bombay (Y/N): <input id="fatherH" type="text"></label><br><br>
 
+  <label>어머니 ABO: <input id="motherABO" type="text"></label><br>
+  <label>어머니 Rh (+/-): <input id="motherRh" type="text"></label><br>
+  <label>어머니 Bombay (Y/N): <input id="motherH" type="text"></label><br><br>
+
+  <button onclick="predictOffspring()">실행</button>
+
+  <h2>예상 자녀 혈액형</h2>
+  <pre id="output"></pre>
+
+  <!-- 외부 JS 파일 연결 -->
   <script src="script.js"></script>
 </body>
 </html>
